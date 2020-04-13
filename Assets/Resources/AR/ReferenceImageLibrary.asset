@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
+  m_Name: ReferenceImageLibrary
+  m_EditorClassIdentifier: 
+  m_GuidLow: 5311099537387456662
+  m_GuidHigh: 17466447362259081869
+  m_Images:
+  - m_SerializedGuid:
+      m_GuidLow: 5173026691949060394
+      m_GuidHigh: 13782235409668842140
+    m_SerializedTextureGuid:
+      m_GuidLow: 8394458018054993248
+      m_GuidHigh: 8259145701598863800
+    m_Size: {x: 0.1497826, y: 0.21}
+    m_SpecifySize: 1
+    m_Name: Hello
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4779755440175486420
+      m_GuidHigh: 11392519725456496564
+    m_SerializedTextureGuid:
+      m_GuidLow: 4968157886209614297
+      m_GuidHigh: 12846908069751041112
+    m_Size: {x: 0.15, y: 0.10938512}
+    m_SpecifySize: 1
+    m_Name: Race
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5118331160848367725
+      m_GuidHigh: 3042523028221702076
+    m_SerializedTextureGuid:
+      m_GuidLow: 14157798297584227196
+      m_GuidHigh: 3620928137639467050
+    m_Size: {x: 0.15, y: 0.07725451}
+    m_SpecifySize: 1
+    m_Name: Puzzle
+    m_Texture: {fileID: 0}
