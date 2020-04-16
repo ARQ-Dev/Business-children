@@ -2,7 +2,7 @@
 
 public class TrackablePrefab : MonoBehaviour
 {
-    public GameObject AssociatedGO { set; private get; }
+    public GameObject AssociatedGO { set; get; }
 
     public PlacingManager.PlacingType _placingType;
 
@@ -17,6 +17,19 @@ public class TrackablePrefab : MonoBehaviour
     {
         if (_placingType == PlacingManager.PlacingType.instantiate)
         {
+
+            if (AssociatedGO == null)
+            {
+                print($"Associated prefab is null!");
+            }
+            else
+            {
+                print($"Destroy instantiated prefab with name: {AssociatedGO.name}!");
+            }
+
+
+
+
             Destroy(AssociatedGO);
             AssociatedGO = null;
         }

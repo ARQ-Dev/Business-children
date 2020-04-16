@@ -28,7 +28,7 @@ public class PlacingManager : MonoBehaviour
 
     private bool _isActive = false;
 
-    public event Action<string, TrackablePrefab, object> OnTrackableDetected;
+    public event Func<string, TrackablePrefab, object, bool> OnTrackableDetected ;
 
     #region MonoBehavior
 
@@ -99,8 +99,10 @@ public class PlacingManager : MonoBehaviour
             TrackablePrefab trackablePrefab = args.updated[0].gameObject.GetComponent<TrackablePrefab>();
             if (trackablePrefab == null) return;
             string imageName = args.updated[0].referenceImage.name;
-            _trackablePrefabs.Add(trackablePrefab);
-            OnTrackableDetected?.Invoke(imageName, trackablePrefab, args.updated[0]);
+
+            if (!_trackablePrefabs.Contains(trackablePrefab)) _trackablePrefabs.Add(trackablePrefab);
+            var recognized = OnTrackableDetected?.Invoke(imageName, trackablePrefab, args.updated[0]);
+            TrackableRecognized = recognized ?? false;
         }
     }
 
@@ -108,8 +110,11 @@ public class PlacingManager : MonoBehaviour
     {
         CheckFirstRecognition(args);
 
+        //if (args.added.Count > 0) print($"Added image name: {args.added[0].referenceImage.name}");
+
         foreach (ARTrackedImage image in args.updated)
         {
+            //print($"Updated image name: {image.referenceImage.name}");
             TrackablePrefab trackablePrefab = image.gameObject.GetComponent<TrackablePrefab>();
             if (trackablePrefab == null) continue;
             trackablePrefab.UpdatePosition();

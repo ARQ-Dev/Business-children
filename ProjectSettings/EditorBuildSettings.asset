@@ -5,10 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ARQ-Splash-Screen.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/BC-Hello.unity
     guid: 24b354f715b57478eafc828ec36e5b7d
+  - enabled: 1
+    path: Assets/Scenes/MainScene.unity
+    guid: bfd9a3033ec7d44e8aef28e532036e3c
   m_configObjects: {}

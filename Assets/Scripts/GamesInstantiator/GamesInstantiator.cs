@@ -44,15 +44,26 @@ public class GamesInstantiator : MonoBehaviour
 
     #endregion
 
-    private void OnTrackableDetected(string referenceName, TrackablePrefab trackablePrefab, object obj)
+    private bool OnTrackableDetected(string referenceName, TrackablePrefab trackablePrefab, object obj)
     {
-        if (_currentName != referenceName) return;
+        print($"Current name: {_currentName}, reference name: {referenceName}!");
+        if (_currentName != referenceName)
+        {
+            print($"Current name not equal reference name!");
+            return false;
+        }
+  
         if (_gamesAssociations.TryGetValue(referenceName, out GameObject go))
         {
-            GameObject associatedGO = Instantiate(go);
-            trackablePrefab.AssociatedGO = associatedGO;
+            print($"Instanciated!");
+
+            if (trackablePrefab.AssociatedGO != null) return true;
+
+            trackablePrefab.AssociatedGO = Instantiate(go);
             _placingManager.TrackableRecognized = true;
+            return true;
         }
+        return false;
     }
 
     #region Methods
@@ -61,6 +72,7 @@ public class GamesInstantiator : MonoBehaviour
     {
         _currentName = gameName;
         _placingManager.RestartTracking();
+        print($"Current game name: {gameName}");
     }
 
     #endregion
