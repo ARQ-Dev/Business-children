@@ -1,0 +1,29 @@
+fileFormatVersion: 2
+guid: 8dd69cde762f8494a85a37f50278b80c
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: TT Norms
+  fontNames:
+  - TT Norms
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 0c55e3d023de4a0448a612789dd60497, type: 3}
+  - {fileID: 12800000, guid: 539a6ee27b5ad3943942ec2bc2087753, type: 3}
+  - {fileID: 12800000, guid: 4e55c57529e6f894982d62ee2bdf1a42, type: 3}
+  - {fileID: 12800000, guid: 78c4f32630a30e949af08e65f3fafa6b, type: 3}
+  - {fileID: 12800000, guid: 3b4439a93da47f0409af58a7c7e43724, type: 3}
+  - {fileID: 12800000, guid: 8b550e9a45dac2c42a935f6c1a756809, type: 3}
+  - {fileID: 12800000, guid: 18dcbe0c18b376d469f9de0013d600b5, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
