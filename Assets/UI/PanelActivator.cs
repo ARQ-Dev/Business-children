@@ -11,7 +11,7 @@ public class PanelActivator : MonoBehaviour
     [SerializeField]
     private GameObject mainCanvas;
     [SerializeField]
-    private GameObject[] generators;
+    private GamesInstantiator gamesInstantiator;
     [SerializeField]
     private GameObject[] panels;
 
@@ -29,15 +29,18 @@ public class PanelActivator : MonoBehaviour
 
     public void ActivateGenerator(int i)
     {
-        //generators[i].SetActive(true);
+        if (gamesInstantiator.isActiveAndEnabled)
+            gamesInstantiator.SetCurrentGame(gamesInstantiator.list_Names[i]);
+        else
+        {
+            gamesInstantiator.gameObject.SetActive(true);
+            gamesInstantiator.SetCurrentGame(gamesInstantiator.list_Names[i]);
+        }
         panelController.OpenPanel(panels[i]);
     }
     public void OnGameClose()
     {
-        foreach (var generator in generators)
-        {
-            //generator.SetActive(false);
-        }
+        gamesInstantiator.gameObject.SetActive(false);
         MainCanvasSetActive(true);
         panelController.OpenPanel(mainPanel);
     }

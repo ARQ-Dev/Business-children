@@ -20,6 +20,8 @@ public class GamesInstantiator : MonoBehaviour
     private List<AssociatedPrefab> m_gamesAssociations = new List<AssociatedPrefab>();
     private Dictionary<string, GameObject> _gamesAssociations = new Dictionary<string, GameObject>();
 
+    public List<string> list_Names = new List<string>();
+
     private string _currentName = "";
 
     #region MonoBehaviour
@@ -29,6 +31,7 @@ public class GamesInstantiator : MonoBehaviour
         foreach (var associatedGame in m_gamesAssociations)
         {
             _gamesAssociations.Add(associatedGame.name, associatedGame.prefab);
+            list_Names.Add(associatedGame.name);
         }
     }
 
