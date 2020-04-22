@@ -40,6 +40,7 @@ public class PanelActivator : MonoBehaviour
         gamesInstantiator.HideCanvas += MainCanvasSetActive;
         MascotControlle.HideGame += OnGameClose;
         RacingControlle.HideGame += OnGameClose;
+        PuzzleGameController.HideGame += OnGameClose;
     }
 
     public void OnGameClose()
@@ -47,6 +48,7 @@ public class PanelActivator : MonoBehaviour
         gamesInstantiator.HideCanvas -= MainCanvasSetActive;
         MascotControlle.HideGame -= OnGameClose;
         RacingControlle.HideGame -= OnGameClose;
+        PuzzleGameController.HideGame -= OnGameClose;
         gamesInstantiator.gameObject.SetActive(false);
         MainCanvasSetActive(true);
         panelController.OpenPanel(mainPanel);

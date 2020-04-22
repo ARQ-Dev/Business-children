@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class PuzzleGameController : MonoBehaviour//Singleton<PuzzleGameController>
 {
+    public delegate void Handler();
+    public static event Handler HideGame;
+
     [SerializeField] private float satisfyingRadius = 0.05f;
     [SerializeField] private GameObject elementsCollection;
     [SerializeField] private GameObject fakeElementsCollection;
-    [SerializeField] private float distributionRadius = 0.45f;
 
     private int elementsCount = 0;
 
@@ -50,9 +52,10 @@ public class PuzzleGameController : MonoBehaviour//Singleton<PuzzleGameControlle
             Destroy(col);
 
             elementsCount++;
-            Debug.Log(elementsCount);
             if(elementsCount == 24) 
             {
+
+                HideGame();
                 /*if ((int)Game.current.progress < (int)Progress.Puzzle)
                 {
                     GlobalGameController.Instance.SaveProgress(Progress.Puzzle);
@@ -71,6 +74,7 @@ public class PuzzleGameController : MonoBehaviour//Singleton<PuzzleGameControlle
     public void CloseScene()
     {
         this.gameObject.SetActive(false);
+        HideGame();
         //GlobalGameController.Instance.OnGameClose();
     }
 

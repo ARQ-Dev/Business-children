@@ -57,7 +57,7 @@ namespace Puzzle{
             
             if (Input.GetMouseButtonDown(0))
             {
-               
+                
                 if (Physics.Raycast(ray, out hit, 200, LayerMask.GetMask("Element")))
                 {
                     elementTransform = hit.transform;
@@ -65,7 +65,6 @@ namespace Puzzle{
             }
             if (Physics.Raycast(ray, out hit, 200, LayerMask.GetMask("Surface")))
             {
-                print(elementTransform);
                 if (elementTransform == null) return;
                 if(puzzleGameController.CheckPosition(elementTransform.gameObject))
                 {             
