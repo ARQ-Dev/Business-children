@@ -46,6 +46,7 @@ public class GamesInstantiator : MonoBehaviour
     private void OnDisable()
     {
         _placingManager.OnTrackableDetected -= OnTrackableDetected;
+        _currentName = "";
     }
 
     #endregion
