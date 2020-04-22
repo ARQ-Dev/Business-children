@@ -108,7 +108,7 @@ public class PlacingManager : MonoBehaviour
         print(image.name);
         if (image!=null)
         {
-            TrackablePrefab trackablePrefab = args.updated[0].gameObject.GetComponent<TrackablePrefab>();
+            TrackablePrefab trackablePrefab = image.gameObject.GetComponent<TrackablePrefab>();
             if (trackablePrefab == null) return;
             string imageName = image.referenceImage.name;
             if (!_trackablePrefabs.Contains(trackablePrefab)) _trackablePrefabs.Add(trackablePrefab);
