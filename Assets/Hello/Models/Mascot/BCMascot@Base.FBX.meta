@@ -1,0 +1,319 @@
+fileFormatVersion: 2
+guid: 40dc021c8578f4a5eb9775df3c5e8eeb
+ModelImporter:
+  serializedVersion: 25
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MascotAntenaEars
+    second: {fileID: 2100000, guid: d1e63198215064caca107a8d12b00caa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MascotBody
+    second: {fileID: 2100000, guid: d9df5089371ea4f00af2bed82cf600df, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MascotGlasses
+    second: {fileID: 2100000, guid: 410b7ae43f73e48d8aba7fd790b8bb0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MascotHLBody
+    second: {fileID: 2100000, guid: 270002f5e427e487e9bab2861e48278c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MascotHands
+    second: {fileID: 2100000, guid: 1362f55fedb654f5789ed1a63241164b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MascotHead
+    second: {fileID: 2100000, guid: 94ad51209784e4a628434be83960b0a9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MascotLegs
+    second: {fileID: 2100000, guid: 7d26a256294854b61b30d0a2b832e728, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MascotNeck
+    second: {fileID: 2100000, guid: 4c26b2533feb549c2bdc5cdbe9b17e77, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MascotWrists
+    second: {fileID: 2100000, guid: cbb3f5bf5087441429478f95d55d5aff, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MascotAntenaEarsBaseColor
+    second: {fileID: 2800000, guid: 07b2ca5e6398a40c9aba6c9e25aefba4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MascotAntenaEarsMetallic
+    second: {fileID: 2800000, guid: 8843dc2d2dc9443a2ba5faf01002548c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MascotAntenaEarsNormal
+    second: {fileID: 2800000, guid: 54d10acb1d79746309a37e3a0da854bb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MascotAntenaEarsRoughness
+    second: {fileID: 2800000, guid: 36c0a14466d66449dba0b6badfa23ad4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MascotBodyBaseColorBase1
+    second: {fileID: 2800000, guid: 6e9c8e8b33d75406d9654a76a51a2ccd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MascotBodyMetallic
+    second: {fileID: 2800000, guid: de2b9dbeef2234f4ea305ebd52f34675, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MascotBodyNormal
+    second: {fileID: 2800000, guid: 84082f28e8005431785ecd3756285079, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MascotBodyRoughness
+    second: {fileID: 2800000, guid: d197f6afbb06545f696fc5f0410760a6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MascotGlassesBaseColorBase1
+    second: {fileID: 2800000, guid: 38cb6e2b45fac4fa8b4be7c9fde46073, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MascotGlassesMetallic
+    second: {fileID: 2800000, guid: 8b96341815bfb47a692f44aaf5355b80, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MascotGlassesNormal
+    second: {fileID: 2800000, guid: d78979b815d1144de8255edfb58868b9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MascotGlassesRoughness
+    second: {fileID: 2800000, guid: 231813e61b3424c52aa594e2a622b3ad, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MascotHLBodyBaseColor
+    second: {fileID: 2800000, guid: 91f6c99c9d4684766a2d89e10fb15880, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MascotHLBodyMetallic
+    second: {fileID: 2800000, guid: 525677aa7b099474ebb38a0f8065b31e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MascotHLBodyNormal
+    second: {fileID: 2800000, guid: 7a5f4afde203546f2928855746016db5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MascotHLBodyRoughness
+    second: {fileID: 2800000, guid: b1929499c8afb49ee8b35e150d5148bd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MascotHandsBaseColor
+    second: {fileID: 2800000, guid: 68c03459c56c440b39e1a490977f221a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MascotHandsMetallic
+    second: {fileID: 2800000, guid: 221d158fb5811471581a72cec38f351b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MascotHandsNormal
+    second: {fileID: 2800000, guid: ae935a00cc17143b5a25f991b89d05d5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MascotHandsRoughness
+    second: {fileID: 2800000, guid: 099128da97b5b4ccb935309c02fd2a4b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MascotHeadBaseColorHappiness2
+    second: {fileID: 2800000, guid: 81e31a47b5d624f6b947c2c5ae95bb33, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MascotHeadMetallic
+    second: {fileID: 2800000, guid: 9957f644ea73f42ff8a77565c25e44d5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MascotHeadNormal
+    second: {fileID: 2800000, guid: 4293443a693f04ea2887b23a396e5ca2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MascotHeadRoughness
+    second: {fileID: 2800000, guid: 5c6b87008daa548368afbe5dd4eaeeab, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MascotLegsBaseColor
+    second: {fileID: 2800000, guid: 5c0bea0de17c24d9f82c81e8039af995, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MascotLegsMetallic
+    second: {fileID: 2800000, guid: 081f56d4367374796b3da6c81b7871ce, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MascotLegsNormal
+    second: {fileID: 2800000, guid: a7bf014764285444aa784ecbb1471425, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MascotLegsRoughness
+    second: {fileID: 2800000, guid: 619a95d4bd05c407cbef6baae86768f4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MascotNeckBaseColor
+    second: {fileID: 2800000, guid: f6a23915e0a42400b9f26b497d6bba18, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MascotNeckMetallic
+    second: {fileID: 2800000, guid: c119911ec74fa430d976a9be1942afd0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MascotNeckNormal
+    second: {fileID: 2800000, guid: a1113191886754f5788d9f386ed57b7b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MascotNeckRoughness
+    second: {fileID: 2800000, guid: bb1be592d848046a1aeb63a01f43df60, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MascotWristsBaseColor
+    second: {fileID: 2800000, guid: 931a8558e40544131aeeb3ff867a34ca, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MascotWristsMetallic
+    second: {fileID: 2800000, guid: 1e6bc6ba88f6340fe9ba40e6c6a5b705, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MascotWristsNormal
+    second: {fileID: 2800000, guid: 8b77c108d53bb41ae9e39cf0597cfe02, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MascotWristsRoughness
+    second: {fileID: 2800000, guid: 0dc966d3c99a14895aa440ee2c6cbe8a, type: 3}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

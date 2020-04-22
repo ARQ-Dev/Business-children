@@ -17,7 +17,6 @@ public class TrackablePrefab : MonoBehaviour
     {
         if (_placingType == PlacingManager.PlacingType.instantiate)
         {
-
             if (AssociatedGO == null)
             {
                 print($"Associated prefab is null!");
@@ -26,9 +25,6 @@ public class TrackablePrefab : MonoBehaviour
             {
                 print($"Destroy instantiated prefab with name: {AssociatedGO.name}!");
             }
-
-
-
 
             Destroy(AssociatedGO);
             AssociatedGO = null;

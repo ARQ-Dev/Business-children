@@ -36,7 +36,6 @@ public class PlacingManager : MonoBehaviour
     {
         _imageTrackingManager = GetComponent<ARTrackedImageManager>();
         _imageTrackingManager.trackedImagesChanged += OnTrackedImageChanged;
-
         if (_trackingFromStart)
         {
             StartTracking();
@@ -50,6 +49,9 @@ public class PlacingManager : MonoBehaviour
     private void OnDisable()
     {
         _imageTrackingManager.trackedImagesChanged -= OnTrackedImageChanged;
+        TrackableRecognized = false;
+        StopTracking();
+        print("Placing manager is disabled");
 
     }
 
@@ -79,6 +81,7 @@ public class PlacingManager : MonoBehaviour
         {
             trackablePrefab.DiscardInstantiatedPrefab();
         }
+        _imageTrackingManager.enabled = false;
         _isActive = false;
     }
 
@@ -94,12 +97,20 @@ public class PlacingManager : MonoBehaviour
     private void CheckFirstRecognition(ARTrackedImagesChangedEventArgs args)
     {
         if (TrackableRecognized) return;
-        if (args.updated.Count > 0)
+        ARTrackedImage image = null;
+        foreach (var image_in_camera in args.updated)
+        {
+            if(image_in_camera.trackingState == UnityEngine.XR.ARSubsystems.TrackingState.Tracking)
+            {
+                image = image_in_camera;
+            }
+        }
+        print(image.name);
+        if (image!=null)
         {
             TrackablePrefab trackablePrefab = args.updated[0].gameObject.GetComponent<TrackablePrefab>();
             if (trackablePrefab == null) return;
-            string imageName = args.updated[0].referenceImage.name;
-
+            string imageName = image.referenceImage.name;
             if (!_trackablePrefabs.Contains(trackablePrefab)) _trackablePrefabs.Add(trackablePrefab);
             var recognized = OnTrackableDetected?.Invoke(imageName, trackablePrefab, args.updated[0]);
             TrackableRecognized = recognized ?? false;
@@ -109,15 +120,15 @@ public class PlacingManager : MonoBehaviour
     private void OnTrackedImageChanged(ARTrackedImagesChangedEventArgs args)
     {
         CheckFirstRecognition(args);
-
-        //if (args.added.Count > 0) print($"Added image name: {args.added[0].referenceImage.name}");
-
+        
         foreach (ARTrackedImage image in args.updated)
         {
-            //print($"Updated image name: {image.referenceImage.name}");
-            TrackablePrefab trackablePrefab = image.gameObject.GetComponent<TrackablePrefab>();
-            if (trackablePrefab == null) continue;
-            trackablePrefab.UpdatePosition();
+            if (image.trackingState == UnityEngine.XR.ARSubsystems.TrackingState.Tracking)
+            {
+                TrackablePrefab trackablePrefab = image.gameObject.GetComponent<TrackablePrefab>();
+                if (trackablePrefab == null) continue;
+                trackablePrefab.UpdatePosition();
+            }
         }
     }
 

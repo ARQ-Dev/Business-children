@@ -26,7 +26,7 @@ public class PanelActivator : MonoBehaviour
     {
         mainCanvas.SetActive(isActive);
     }
-
+    
     public void ActivateGenerator(int i)
     {
         if (gamesInstantiator.isActiveAndEnabled)
@@ -37,9 +37,16 @@ public class PanelActivator : MonoBehaviour
             gamesInstantiator.SetCurrentGame(gamesInstantiator.list_Names[i]);
         }
         panelController.OpenPanel(panels[i]);
+        gamesInstantiator.HideCanvas += MainCanvasSetActive;
+        MascotControlle.HideGame += OnGameClose;
+        RacingControlle.HideGame += OnGameClose;
     }
+
     public void OnGameClose()
     {
+        gamesInstantiator.HideCanvas -= MainCanvasSetActive;
+        MascotControlle.HideGame -= OnGameClose;
+        RacingControlle.HideGame -= OnGameClose;
         gamesInstantiator.gameObject.SetActive(false);
         MainCanvasSetActive(true);
         panelController.OpenPanel(mainPanel);

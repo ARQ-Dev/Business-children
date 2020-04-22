@@ -8,6 +8,9 @@ public class GamesInstantiator : MonoBehaviour
     [SerializeField]
     private PlacingManager _placingManager;
 
+    public delegate void Handler(bool isActive);
+    public event Handler HideCanvas;
+
     [Serializable]
     public struct AssociatedPrefab
     {
@@ -64,10 +67,14 @@ public class GamesInstantiator : MonoBehaviour
 
             trackablePrefab.AssociatedGO = Instantiate(go);
             _placingManager.TrackableRecognized = true;
+            HideCanvas(false);
             return true;
         }
         return false;
     }
+
+
+
 
     #region Methods
 
