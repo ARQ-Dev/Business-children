@@ -13,7 +13,10 @@ public class PanelActivator : MonoBehaviour
     [SerializeField]
     private GamesInstantiator gamesInstantiator;
     [SerializeField]
+    private FocusSquare flappyInstantiator;
+    [SerializeField]
     private GameObject[] panels;
+
 
     private void OnEnable()
     {
@@ -29,22 +32,32 @@ public class PanelActivator : MonoBehaviour
     
     public void ActivateGenerator(int i)
     {
-        if (gamesInstantiator.isActiveAndEnabled)
-            gamesInstantiator.SetCurrentGame(gamesInstantiator.list_Names[i]);
+        panelController.OpenPanel(panels[i]);
+        if (i != 3)
+        {
+            if (gamesInstantiator.isActiveAndEnabled)
+                gamesInstantiator.SetCurrentGame(gamesInstantiator.list_Names[i]);
+            else
+            {
+                gamesInstantiator.gameObject.SetActive(true);
+                gamesInstantiator.SetCurrentGame(gamesInstantiator.list_Names[i]);
+            }
+            gamesInstantiator.HideCanvas += MainCanvasSetActive;
+            MascotControlle.HideGame += OnGameClose;
+            RacingControlle.HideGame += OnGameClose;
+            PuzzleGameController.HideGame += OnGameClose;
+        }
         else
         {
-            gamesInstantiator.gameObject.SetActive(true);
-            gamesInstantiator.SetCurrentGame(gamesInstantiator.list_Names[i]);
+            flappyInstantiator.gameObject.SetActive(true);
+            flappyInstantiator.HideCanvas += MainCanvasSetActive;
         }
-        panelController.OpenPanel(panels[i]);
-        gamesInstantiator.HideCanvas += MainCanvasSetActive;
-        MascotControlle.HideGame += OnGameClose;
-        RacingControlle.HideGame += OnGameClose;
-        PuzzleGameController.HideGame += OnGameClose;
     }
 
     public void OnGameClose()
     {
+        flappyInstantiator.gameObject.SetActive(false);
+        flappyInstantiator.HideCanvas -= MainCanvasSetActive;
         gamesInstantiator.HideCanvas -= MainCanvasSetActive;
         MascotControlle.HideGame -= OnGameClose;
         RacingControlle.HideGame -= OnGameClose;
