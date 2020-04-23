@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: MascotHead
-  m_Shader: {fileID: -6465566751694194690, guid: 1fb2ce2fc06bd664bb9a4c2d5cf34fb3,
+  m_Shader: {fileID: -6465566751694194690, guid: d0743eee1b30ed244a37a2e1616c626d,
     type: 3}
   m_ShaderKeywords: _GLOSSINESS_FROM_BASE_ALPHA _SPECULAR_COLOR
   m_LightmapFlags: 4
@@ -33,12 +33,20 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Texture2D_2EE67BA8:
+        m_Texture: {fileID: 2800000, guid: 81e31a47b5d624f6b947c2c5ae95bb33, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - Texture2D_7D9AA9B5:
         m_Texture: {fileID: 2800000, guid: 81e31a47b5d624f6b947c2c5ae95bb33, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_EA3AA9FA:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_F3E5AB1B:
+        m_Texture: {fileID: 2800000, guid: 5740ed4a5b621424a8f6d4affb2f4b00, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
@@ -99,6 +107,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - PixelSnap: 1
+    - Vector1_7793223A: -1
+    - Vector1_8841259D: 0
     - Vector1_FBC4BA2: -1
     - _AlphaClip: 0
     - _Blend: 0
@@ -136,8 +146,10 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
+    - Color_448F54D: {r: 1, g: 1, b: 1, a: 0.03137255}
     - Color_5BE89F3C: {r: 3.2, g: 0.5647059, b: 0, a: 0.2}
     - Color_8E877421: {r: 1, g: 1, b: 1, a: 0.03137255}
+    - Color_CEE48A5A: {r: 3.2, g: 0.627451, b: 0, a: 0.2}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 0.03}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DissolveEdgeColor: {r: 1, g: 0.44493118, b: 0, a: 1}

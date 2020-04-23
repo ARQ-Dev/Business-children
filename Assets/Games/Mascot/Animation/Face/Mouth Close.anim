@@ -41,7 +41,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: material._LerpValueMouth
+    attribute: material.Vector1_8841259D
     path: 
     classID: 137
     script: {fileID: 0}
@@ -55,7 +55,7 @@ AnimationClip:
     genericBindings:
     - serializedVersion: 2
       path: 0
-      attribute: 2216187318
+      attribute: 2211494565
       script: {fileID: 0}
       typeID: 137
       customType: 22
@@ -106,7 +106,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: material._LerpValueMouth
+    attribute: material.Vector1_8841259D
     path: 
     classID: 137
     script: {fileID: 0}

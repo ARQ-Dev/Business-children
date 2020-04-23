@@ -51,6 +51,7 @@ public class PanelActivator : MonoBehaviour
         {
             flappyInstantiator.gameObject.SetActive(true);
             flappyInstantiator.HideCanvas += MainCanvasSetActive;
+            GameController.HideGame += OnGameClose;
         }
     }
 
@@ -62,6 +63,7 @@ public class PanelActivator : MonoBehaviour
         MascotControlle.HideGame -= OnGameClose;
         RacingControlle.HideGame -= OnGameClose;
         PuzzleGameController.HideGame -= OnGameClose;
+        GameController.HideGame -= OnGameClose;
         gamesInstantiator.gameObject.SetActive(false);
         MainCanvasSetActive(true);
         panelController.OpenPanel(mainPanel);
