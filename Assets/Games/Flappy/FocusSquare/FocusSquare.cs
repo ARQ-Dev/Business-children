@@ -139,11 +139,11 @@ public class FocusSquare : MonoBehaviour
             HideCanvas(false);
             findingSquare.SetActive(false);
             foundSquare.SetActive(false);
+            this.gameObject.SetActive(false);
             var instantiatedPrefab = Instantiate(prefab);
             instantiatedPrefab.transform.position = new Vector3(foundSquare.transform.position.x, foundSquare.transform.position.y + offset, foundSquare.transform.position.z);
             instantiatedPrefab.transform.rotation = Quaternion.LookRotation(foundSquare.transform.position - Camera.current.transform.position);
             instantiatedPrefab.transform.eulerAngles = new Vector3(0, instantiatedPrefab.transform.eulerAngles.y + angleOffset, 0);
-            this.gameObject.SetActive(false);
         }
     }
 
