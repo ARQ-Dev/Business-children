@@ -30,6 +30,11 @@ public class PanelActivator : MonoBehaviour
         mainCanvas.SetActive(isActive);
     }
     
+    public void GetAllCollections()
+    {
+        gamesInstantiator.GetCollections();
+    }
+
     public void ActivateGenerator(int i)
     {
         panelController.OpenPanel(panels[i]);

@@ -21,8 +21,8 @@ public class FakeLoading : MonoBehaviour
 
     [SerializeField]
     private Button _continueButton;
-    [SerializeField]
-    private Animator _buttonAnimator;
+    //[SerializeField]
+    //private Animator _buttonAnimator;
 
     #region MonoBehaviour
 
@@ -65,7 +65,6 @@ public class FakeLoading : MonoBehaviour
         }
 
         _continueButton.gameObject.SetActive(true);
-        _buttonAnimator.SetTrigger("Button");
     }
 
 

@@ -12,6 +12,9 @@ public class MascotControlle : MonoBehaviour
     public delegate void Handler();
     public static event Handler HideGame;
 
+    public delegate void HandlerSaving(Progress foo);
+    public static event HandlerSaving SaveProgress;
+
     public void OnTimelineEnd()
     {
         mascotMesh.SetActive(false);
@@ -26,15 +29,15 @@ public class MascotControlle : MonoBehaviour
 
     public void CloseScene()
     {
-        //SaveState();
+        SaveState();
         this.gameObject.SetActive(false);
         HideGame();
     }
 
     public void SaveState()
     {
-        //if ((int)Game.current.progress > (int)Progress.Cover) return;
-        //GlobalGameController.Instance.SaveProgress(Progress.Cover);
+        if ((int)Game.current.progress > (int)Progress.Cover) return;
+        SaveProgress(Progress.Cover);
     }
 
 }

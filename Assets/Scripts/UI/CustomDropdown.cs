@@ -29,7 +29,10 @@ public class CustomDropdown : MonoBehaviour
     private Vector3 closeRot = new Vector3(0, 0, 0);
 
     private bool isOpen = false;
-
+    public Progress Progress
+    {
+        get { return Game.current.progress; }
+    }
     private void Start()
     {
         mainButtonImage = mainButton.GetComponent<Image>();
@@ -47,10 +50,11 @@ public class CustomDropdown : MonoBehaviour
 
    public void Activate(bool isActive)
     {
-       
-        foreach(var x in buttons)
+
+        for (int i = 0; i <= (int)Progress; i++)
         {
-            x.SetActive(isActive);
+            if(i!=3 || (i==3 && ProgressController.isFlappyAvaible))
+                buttons[i].SetActive(isActive);
         }
 
         panelImage.sprite = isActive ? panelSprite : null;

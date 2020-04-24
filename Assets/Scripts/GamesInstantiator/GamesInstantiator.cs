@@ -29,7 +29,7 @@ public class GamesInstantiator : MonoBehaviour
 
     #region MonoBehaviour
 
-    private void Start()
+    public void GetCollections()
     {
         foreach (var associatedGame in m_gamesAssociations)
         {
@@ -37,7 +37,6 @@ public class GamesInstantiator : MonoBehaviour
             list_Names.Add(associatedGame.name);
         }
     }
-
     private void OnEnable()
     {
         _placingManager.OnTrackableDetected += OnTrackableDetected;

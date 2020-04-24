@@ -56,18 +56,7 @@ namespace UnityStandardAssets.Vehicles.Car
         public float MaxSpeed{get { return m_Topspeed; }}
         public float Revs { get; private set; }
         public float AccelInput { get; private set; }
-
-        public Text txt;
-
-        private void Update()
-        {
-            txt.text = gameObject.transform.position.ToString();
-            
-        }
-
-        //Сползает y
-
-
+        
         // Use this for initialization
         private void Start()
         {
@@ -178,7 +167,7 @@ namespace UnityStandardAssets.Vehicles.Car
             CalculateRevs();
             GearChanging();
 
-            AddDownForce();
+            
             CheckForWheelSpin();
             TractionControl();
         }
@@ -270,8 +259,8 @@ namespace UnityStandardAssets.Vehicles.Car
         // this is used to add more grip in relation to speed
         private void AddDownForce()
         {
-            /*m_WheelColliders[0].attachedRigidbody.AddForce(-transform.up*m_Downforce*
-                                                         m_WheelColliders[0].attachedRigidbody.velocity.magnitude);*/
+            /*gameObject.GetComponent<Rigidbody>().AddForce(-transform.up*m_Downforce*
+                                                         gameObject.GetComponent<Rigidbody>().velocity.magnitude);*/
         }
 
 

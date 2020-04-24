@@ -7,18 +7,21 @@ public class RacingControlle : MonoBehaviour
     public delegate void Handler();
     public static event Handler HideGame;
 
+    public delegate void HandlerSaving(Progress foo);
+    public static event HandlerSaving SaveProgress;
+
     public void CloseScene()
     {
-        //SaveState();
-        //GlobalGameController.Instance.OnGameClose();
+        SaveState();
         this.gameObject.SetActive(false);
         HideGame();
     }
 
     public void SaveState()
     {
-        //if ((int)Game.current.progress > (int)Progress.Racing) return;
-        //GlobalGameController.Instance.SaveProgress(Progress.Racing);
+        if ((int)Game.current.progress > (int)Progress.Racing) return;
+
+        SaveProgress(Progress.Racing);
     }
 
 }

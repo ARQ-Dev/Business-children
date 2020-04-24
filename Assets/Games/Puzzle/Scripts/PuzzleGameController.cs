@@ -7,6 +7,9 @@ public class PuzzleGameController : MonoBehaviour//Singleton<PuzzleGameControlle
     public delegate void Handler();
     public static event Handler HideGame;
 
+    public delegate void HandlerSaving(Progress foo);
+    public static event HandlerSaving SaveProgress;
+
     [SerializeField] private float satisfyingRadius = 0.05f;
     [SerializeField] private GameObject elementsCollection;
     [SerializeField] private GameObject fakeElementsCollection;
@@ -17,15 +20,6 @@ public class PuzzleGameController : MonoBehaviour//Singleton<PuzzleGameControlle
 
     private void Awake()
     {
-        //foreach (Transform elementTransform in elementsCollection.transform)
-        //{
-        //    correctTransforms.Add(elementTransform.gameObject, elementTransform.localPosition);
-        //    //elementTransform.localPosition = 
-        //    //elementTransform.localPosition = new Vector3(Random.Range(-distributionRadius, distributionRadius), Random.Range(-distributionRadius, distributionRadius), elementTransform.localPosition.z);
-        //}
-
-        //var elements = elementsCollection.t
-
         for (int i = 0; i < elementsCollection.transform.childCount; i++)
         {
             correctTransforms.Add(elementsCollection.transform.GetChild(i).gameObject, elementsCollection.transform.GetChild(i).localPosition);
@@ -56,12 +50,12 @@ public class PuzzleGameController : MonoBehaviour//Singleton<PuzzleGameControlle
             {
 
                 HideGame();
-                /*if ((int)Game.current.progress < (int)Progress.Puzzle)
+                if ((int)Game.current.progress < (int)Progress.Puzzle)
                 {
-                    GlobalGameController.Instance.SaveProgress(Progress.Puzzle);
+                    SaveProgress(Progress.Puzzle);
                     CloseScene();
-                    GlobalGameController.Instance.ActivateGenerator(3);
-                };*/
+                    ProgressController.isFlappyAvaible = true;
+                };
            
             }
 
@@ -75,7 +69,6 @@ public class PuzzleGameController : MonoBehaviour//Singleton<PuzzleGameControlle
     {
         this.gameObject.SetActive(false);
         HideGame();
-        //GlobalGameController.Instance.OnGameClose();
     }
 
 
