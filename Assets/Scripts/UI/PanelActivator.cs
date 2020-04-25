@@ -20,7 +20,7 @@ public class PanelActivator : MonoBehaviour
 
     private void OnEnable()
     {
-        panelController.firstPanel = mainPanel;
+        //panelController.firstPanel = mainPanel;
         //generators[0].SetActive(false);
     }
 

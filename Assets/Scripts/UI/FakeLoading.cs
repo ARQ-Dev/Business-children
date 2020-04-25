@@ -26,7 +26,7 @@ public class FakeLoading : MonoBehaviour
 
     #region MonoBehaviour
 
-    private void Start()
+    private void StartLoading()
     {
         StartCoroutine(Loading());
     }

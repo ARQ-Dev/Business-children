@@ -52,7 +52,6 @@ public class GamesInstantiator : MonoBehaviour
 
     private bool OnTrackableDetected(string referenceName, TrackablePrefab trackablePrefab, object obj)
     {
-        print($"Current name: {_currentName}, reference name: {referenceName}!");
         if (_currentName != referenceName)
         {
             print($"Current name not equal reference name!");
@@ -61,11 +60,11 @@ public class GamesInstantiator : MonoBehaviour
   
         if (_gamesAssociations.TryGetValue(referenceName, out GameObject go))
         {
-            print($"Instanciated!");
 
             if (trackablePrefab.AssociatedGO != null) return true;
 
             trackablePrefab.AssociatedGO = Instantiate(go);
+            trackablePrefab.AssociatedGO.transform.eulerAngles = new Vector3(0, trackablePrefab.AssociatedGO.transform.eulerAngles.y+270, 0);
             _placingManager.TrackableRecognized = true;
             HideCanvas(false);
             return true;
@@ -82,7 +81,6 @@ public class GamesInstantiator : MonoBehaviour
     {
         _currentName = gameName;
         _placingManager.RestartTracking();
-        print($"Current game name: {gameName}");
     }
 
     #endregion

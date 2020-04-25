@@ -33,7 +33,7 @@ public class CustomDropdown : MonoBehaviour
     {
         get { return Game.current.progress; }
     }
-    private void Start()
+    private void Awake()
     {
         mainButtonImage = mainButton.GetComponent<Image>();
         mainButtonSprite = mainButtonImage.sprite;
@@ -50,13 +50,16 @@ public class CustomDropdown : MonoBehaviour
 
    public void Activate(bool isActive)
     {
-
+        if ((int)Game.current.progress == (int)Progress.Puzzle)
+            ProgressController.isFlappyAvaible = true;
+        
         for (int i = 0; i <= (int)Progress; i++)
         {
-            if(i!=3 || (i==3 && ProgressController.isFlappyAvaible))
+            if (i != 3 || (i == 3 && ProgressController.isFlappyAvaible))
+            {
                 buttons[i].SetActive(isActive);
+            }
         }
-
         panelImage.sprite = isActive ? panelSprite : null;
         panelImage.color = !isActive ? transperent : notTransperent;
         mainButtonImage.sprite = !isActive ? mainButtonSprite : null;

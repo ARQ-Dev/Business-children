@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PuzzleGameController : MonoBehaviour//Singleton<PuzzleGameController>
+public class PuzzleGameController : MonoBehaviour
 {
     public delegate void Handler();
     public static event Handler HideGame;
@@ -53,8 +53,8 @@ public class PuzzleGameController : MonoBehaviour//Singleton<PuzzleGameControlle
                 if ((int)Game.current.progress < (int)Progress.Puzzle)
                 {
                     SaveProgress(Progress.Puzzle);
-                    CloseScene();
                     ProgressController.isFlappyAvaible = true;
+                    CloseScene();
                 };
            
             }

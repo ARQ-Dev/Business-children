@@ -10,6 +10,8 @@ public class ProgressController : MonoBehaviour
     [SerializeField]
     private GameObject mainPanel;
     [SerializeField]
+    private GameObject coverPanel;
+    [SerializeField]
     private PanelActivator panelActivator;
     private Game game = new Game();
 
@@ -23,7 +25,6 @@ public class ProgressController : MonoBehaviour
         {
             game.progress = LoadProgress();
             Game.current = game;
-            Debug.Log(Game.current.progress);
         }
         else
         {
@@ -34,12 +35,13 @@ public class ProgressController : MonoBehaviour
 
         if (Game.current.progress == Progress.InitialState)
         {
-            //panelController.firstPanel = coverPanel;
+            panelController.firstPanel = coverPanel;
             panelActivator.GetAllCollections();
             panelActivator.ActivateGenerator(0);
         }
         else
         {
+            panelActivator.GetAllCollections();
             panelController.firstPanel = mainPanel;
         }
         MascotControlle.SaveProgress += SaveProgress;

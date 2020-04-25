@@ -17,19 +17,6 @@ namespace Puzzle{
             }
         }
 
-
-        private void Start()
-        {
-
-
-
-      
-
-
-
-        }
-
-
         public void CheckPosition(GameObject element)
         {
             Transform elementTransform = element.transform;

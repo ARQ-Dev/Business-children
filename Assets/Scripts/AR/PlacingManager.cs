@@ -51,8 +51,6 @@ public class PlacingManager : MonoBehaviour
         _imageTrackingManager.trackedImagesChanged -= OnTrackedImageChanged;
         TrackableRecognized = false;
         StopTracking();
-        print("Placing manager is disabled");
-
     }
 
     #endregion
@@ -105,7 +103,6 @@ public class PlacingManager : MonoBehaviour
                 image = image_in_camera;
             }
         }
-        print(image.name);
         if (image!=null)
         {
             TrackablePrefab trackablePrefab = image.gameObject.GetComponent<TrackablePrefab>();

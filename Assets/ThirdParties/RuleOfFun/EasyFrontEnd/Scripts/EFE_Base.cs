@@ -110,7 +110,6 @@ public class EFE_Base: MonoBehaviour {
 		//if panel already openingdont allow it again
 		if(panelIsTransitioning)
 		{return;}
-		
 		panelIsTransitioning=true;
 		print("EFE - Open Panel");
 		

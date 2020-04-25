@@ -9,6 +9,7 @@ public class GameController: MonoBehaviour
 {
     public delegate void Handler();
     public static event Handler HideGame;
+
     [SerializeField]
     private Text scoreText;
     [SerializeField]
@@ -43,7 +44,6 @@ public class GameController: MonoBehaviour
 
     public void CharacterCollided()
     {
-        print("here");
         bestScoreText.SetActive(true);
         restartBtn.SetActive(true);
         bestScore = LoadGame();
@@ -85,7 +85,6 @@ public class GameController: MonoBehaviour
         Time.timeScale = 1;
         this.gameObject.SetActive(false);
         HideGame();
-        //GlobalGameController.Instance.OnGameClose();
     }
 
 
