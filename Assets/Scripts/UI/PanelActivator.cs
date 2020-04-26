@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.ARFoundation;
 
 public class PanelActivator : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public class PanelActivator : MonoBehaviour
     private FocusSquare flappyInstantiator;
     [SerializeField]
     private GameObject[] panels;
+
+    [SerializeField]
+    private ARPlaneManager _arPlaneManager;
 
 
     private void OnEnable()
@@ -54,12 +58,25 @@ public class PanelActivator : MonoBehaviour
         }
         else
         {
+            StartPlaneManager();
             flappyInstantiator.gameObject.SetActive(true);
             flappyInstantiator.HideCanvas += MainCanvasSetActive;
             GameController.HideGame += OnGameClose;
+            GameController.HideGame += StopPlaneManager;
         }
     }
 
+    public void StopPlaneManager()
+    {
+        _arPlaneManager.enabled = false;
+        
+    }
+
+
+    public void StartPlaneManager()
+    {
+        _arPlaneManager.enabled = true;
+    }
     public void OnGameClose()
     {
         flappyInstantiator.gameObject.SetActive(false);
@@ -69,6 +86,7 @@ public class PanelActivator : MonoBehaviour
         RacingControlle.HideGame -= OnGameClose;
         PuzzleGameController.HideGame -= OnGameClose;
         GameController.HideGame -= OnGameClose;
+        GameController.HideGame -= StopPlaneManager;
         gamesInstantiator.gameObject.SetActive(false);
         MainCanvasSetActive(true);
         panelController.OpenPanel(mainPanel);
