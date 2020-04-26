@@ -61,7 +61,6 @@ public class PuzzleGameController : MonoBehaviour
 
             return true;
         }
-        //Debug.Log(Vector3.Distance(elementTransform.position, correctPosition));
         return false;
     }
 

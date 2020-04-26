@@ -52,7 +52,7 @@ public class CustomDropdown : MonoBehaviour
     {
         if ((int)Game.current.progress == (int)Progress.Puzzle)
             ProgressController.isFlappyAvaible = true;
-        
+
         for (int i = 0; i <= (int)Progress; i++)
         {
             if (i != 3 || (i == 3 && ProgressController.isFlappyAvaible))
@@ -60,6 +60,7 @@ public class CustomDropdown : MonoBehaviour
                 buttons[i].SetActive(isActive);
             }
         }
+        
         panelImage.sprite = isActive ? panelSprite : null;
         panelImage.color = !isActive ? transperent : notTransperent;
         mainButtonImage.sprite = !isActive ? mainButtonSprite : null;

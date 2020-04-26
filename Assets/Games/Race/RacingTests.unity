@@ -133,6 +133,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 1829267069295819745, guid: 137da02c5f766414397b304e6feb04ca,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1829267069295819746, guid: 137da02c5f766414397b304e6feb04ca,
         type: 3}
       propertyPath: m_CookingOptions
@@ -142,6 +147,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2474144155370322303, guid: 137da02c5f766414397b304e6feb04ca,
+        type: 3}
+      propertyPath: axesToUse
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2719129703412636466, guid: 137da02c5f766414397b304e6feb04ca,
         type: 3}
@@ -153,6 +163,31 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2877790678669881218, guid: 137da02c5f766414397b304e6feb04ca,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877790678669881218, guid: 137da02c5f766414397b304e6feb04ca,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877790678669881218, guid: 137da02c5f766414397b304e6feb04ca,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877790678669881218, guid: 137da02c5f766414397b304e6feb04ca,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877790678669881218, guid: 137da02c5f766414397b304e6feb04ca,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
     - target: {fileID: 3655236827233740037, guid: 137da02c5f766414397b304e6feb04ca,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -161,7 +196,7 @@ PrefabInstance:
     - target: {fileID: 4012973767323272877, guid: 137da02c5f766414397b304e6feb04ca,
         type: 3}
       propertyPath: m_Mass
-      value: 100
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 4012973767323272877, guid: 137da02c5f766414397b304e6feb04ca,
         type: 3}
@@ -172,6 +207,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsKinematic
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4461556565531501798, guid: 137da02c5f766414397b304e6feb04ca,
+        type: 3}
+      propertyPath: axesToUse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8119851194336465011, guid: 137da02c5f766414397b304e6feb04ca,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8879260330514263217, guid: 137da02c5f766414397b304e6feb04ca,
         type: 3}

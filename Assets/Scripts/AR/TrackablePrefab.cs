@@ -11,13 +11,23 @@ public class TrackablePrefab : MonoBehaviour
     {
         if (AssociatedGO == null) return;
         AssociatedGO.transform.position = transform.position;
-        AssociatedGO.transform.eulerAngles = new Vector3(0, transform.eulerAngles.y+180, 0);
-        if(AssociatedGO.name[0] == 'B')
+
+        if (AssociatedGO.name[0] == 'B')
+        {
             AssociatedGO.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+            AssociatedGO.transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0);
+        }
         else if (AssociatedGO.name[0] == 'R')
+        {
+            AssociatedGO.transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
             AssociatedGO.transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
+        }
+
         else if (AssociatedGO.name[0] == 'P')
-            AssociatedGO.transform.localScale = new Vector3(0.6f, 0.6f, 0.6f);
+        {
+            AssociatedGO.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
+            AssociatedGO.transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0);
+        }
     }
 
     public void DiscardInstantiatedPrefab()

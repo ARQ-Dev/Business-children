@@ -8,6 +8,8 @@ public class FocusSquare : MonoBehaviour
 {
     public delegate void Handler(bool isActive);
     public event Handler HideCanvas;
+    [SerializeField]
+    private Camera mainCamera;
     public enum FocusState
     {
         Initializing,
@@ -67,7 +69,7 @@ public class FocusSquare : MonoBehaviour
             var hitPose = s_Hits[0].pose;
 
             foundSquare.transform.position = hitPose.position;
-            foundSquare.transform.rotation = Quaternion.identity;
+            foundSquare.transform.rotation = hitPose.rotation;
 
             return true;
         }
@@ -136,14 +138,14 @@ public class FocusSquare : MonoBehaviour
     {
         if(SquareState == FocusState.Found)
         {
-            HideCanvas(false);
+            HideCanvas?.Invoke(false);
             findingSquare.SetActive(false);
             foundSquare.SetActive(false);
-            this.gameObject.SetActive(false);
             var instantiatedPrefab = Instantiate(prefab);
             instantiatedPrefab.transform.position = new Vector3(foundSquare.transform.position.x, foundSquare.transform.position.y + offset, foundSquare.transform.position.z);
-            instantiatedPrefab.transform.rotation = Quaternion.LookRotation(foundSquare.transform.position - Camera.current.transform.position);
+            instantiatedPrefab.transform.rotation = Quaternion.LookRotation(foundSquare.transform.position - mainCamera.transform.position);
             instantiatedPrefab.transform.eulerAngles = new Vector3(0, instantiatedPrefab.transform.eulerAngles.y + angleOffset, 0);
+            this.gameObject.SetActive(false);
         }
     }
 
