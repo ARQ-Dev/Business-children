@@ -21,8 +21,8 @@ public class Axelerator : MonoBehaviour
         //car = other.gameObject;
         float angle = Vector3.Angle(car.transform.forward, transform.forward);
         if (angle > 90 || carControll.V <= 0) return;
-        Debug.Log(angle);
-        Debug.Log(car.name);
+        //Debug.Log(angle);
+        //Debug.Log(car.name);
         car.GetComponent<CarController>().m_Topspeed = topSpeed;
         Invoke("SetOldTopSpeed", delay);
 

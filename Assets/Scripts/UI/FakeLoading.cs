@@ -40,7 +40,7 @@ public class FakeLoading : MonoBehaviour
         {
             _slider.value = i;
             _text.text = $"{i} %";
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(0.025f);
         }
 
         OnLoadingEnded();
