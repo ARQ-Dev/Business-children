@@ -19,9 +19,9 @@ MonoBehaviour:
       m_GuidLow: 5173026691949060394
       m_GuidHigh: 13782235409668842140
     m_SerializedTextureGuid:
-      m_GuidLow: 9578956929989376419
-      m_GuidHigh: 6812362519850302667
-    m_Size: {x: 0.1497826, y: 0.21030596}
+      m_GuidLow: 8394458018054993248
+      m_GuidHigh: 8259145701598863800
+    m_Size: {x: 0.1497826, y: 0.20999998}
     m_SpecifySize: 1
     m_Name: Hallo
     m_Texture: {fileID: 0}
@@ -29,9 +29,9 @@ MonoBehaviour:
       m_GuidLow: 4779755440175486420
       m_GuidHigh: 11392519725456496564
     m_SerializedTextureGuid:
-      m_GuidLow: 4918641293528176505
-      m_GuidHigh: 14502258791623421832
-    m_Size: {x: 0.15, y: 0.10856354}
+      m_GuidLow: 4968157886209614297
+      m_GuidHigh: 12846908069751041112
+    m_Size: {x: 0.15, y: 0.10938512}
     m_SpecifySize: 1
     m_Name: Race
     m_Texture: {fileID: 0}
@@ -39,8 +39,8 @@ MonoBehaviour:
       m_GuidLow: 5118331160848367725
       m_GuidHigh: 3042523028221702076
     m_SerializedTextureGuid:
-      m_GuidLow: 17584748326831799197
-      m_GuidHigh: 9806375350603516104
+      m_GuidLow: 14157798297584227196
+      m_GuidHigh: 3620928137639467050
     m_Size: {x: 0.15, y: 0.07725451}
     m_SpecifySize: 1
     m_Name: Puzzle
